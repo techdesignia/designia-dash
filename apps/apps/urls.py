@@ -7,6 +7,8 @@ import settings
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'common.views.home', name='home'),
+     url(r'^login/$', 'django.contrib.auth.views.login',
+        {'template_name': 'login.html'}, name="login"),
 #    url(r'^apps/', include('apps.common.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
