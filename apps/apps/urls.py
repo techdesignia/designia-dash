@@ -8,7 +8,9 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'common.views.home', name='home'),
      url(r'^login/$', 'django.contrib.auth.views.login',
-        {'template_name': 'login.html'}, name="login"),
+        {'template_name': 'common-login.html'}, name="login"),
+     url(r'^logout/$', 'django.contrib.auth.views.logout',
+        {'template_name': 'common-login.html'}, name="logout"),
 #    url(r'^apps/', include('apps.common.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

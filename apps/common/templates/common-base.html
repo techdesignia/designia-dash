@@ -79,7 +79,11 @@
 							<section class="is-text-style1">
 								<div class="inner">
 									<p>
-										Logged In:<strong>Jon Seamon </strong> <a href="/logout/">Sign Off</a>
+									    {% if request.user.is_authenticated %}
+										Logged In:<strong> {{request.user.username}} </strong> <br><a href="/logout/">Sign Off</a>
+										{% else %}
+										<strong>Not Logged In</strong> <a href="/login/">Sign In</a>
+										{% endif %}
 									</p>
 								</div>
 							</section>
